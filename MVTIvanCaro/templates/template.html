@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla Familia</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    </head>
+    
+<body>
+    <h2 style="color:brown;">Lista de familiares</h2>
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <tr style="color: yellow;">
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Nacimiento</th>
+                </tr>
+                {% for item in context %}
+                <tr>
+                        <td>
+                            {{item.nombre}}
+                        </td>
+                        <td>
+                            {{item.apellido}}
+                        </td>
+                        <td>
+                            {{item.edad}}
+                        </td>
+                        <td>
+                            {{item.fecha_nacimiento}}
+                        </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>    
+</body>
+</html>
